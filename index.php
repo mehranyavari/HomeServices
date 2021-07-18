@@ -16,6 +16,8 @@
     <title>Wordpress Theme</title>
 </head>
 <body>
+<header style="background: palevioletred;text-align: center">My Header</header>
 <h1 style="text-align: center">سلام وردپرس</h1>
+<footer style="background: rosybrown;text-align: center">My Footer</footer>
 </body>
 </html>
