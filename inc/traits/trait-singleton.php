@@ -1,14 +1,14 @@
 <?php
 
-namespace Homei\Inc\Traits;
+namespace HOMEI_THEME\Inc\Traits;
 
 trait Singleton
 {
-    public function __construct()
+    protected function __construct()
     {
     }
 
-    public function __clone()
+    final protected function __clone()
     {
 
     }
@@ -19,8 +19,8 @@ trait Singleton
         $called_class = get_called_class();
 
         if (!isset($instance[$called_class])) {
-            $instance[$called_class] = new $called_class;
-            do_action(sprintf('homei_sigleton_init%s', $called_class));
+            $instance[$called_class] = new $called_class();
+            do_action(sprintf('homei_theme_sigleton_init%s', $called_class));
         }
         return $instance[$called_class];
     }
