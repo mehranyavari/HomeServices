@@ -6,10 +6,17 @@
  * @package Home Services
  */
 
-if (!defined('HOMEI_DIR_PATH')){
-define('HOMEI_DIR_PATH',untrailingslashit(get_template_directory()));
+if (!defined('HOMEI_DIR_PATH')) {
+    define('HOMEI_DIR_PATH', untrailingslashit(get_template_directory()));
 }
-require_once HOMEI_DIR_PATH.'/inc/helpers/autoloader.php';
+require_once HOMEI_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once HOMEI_DIR_PATH.'/inc/classes/class-homei.php';
+
+function homei_get_theme_instance(){
+    \HOMEI_THEME\Inc\HOMEI_THEME::get_instance();
+}
+homei_get_theme_instance();
+
 function homei_enqueue_scripts()
 {
     //wp_enqueue_style('stylesheet',get_template_directory_uri().'/style.css');
@@ -21,7 +28,7 @@ function homei_enqueue_scripts()
     ## register style.css
     wp_register_style('stylesheet', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
     ## register bootstrap.min.css
-    wp_register_style('bootstrap',get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' , [], false, 'all');
+    wp_register_style('bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', [], false, 'all');
 
     # register scripts
     wp_register_script('main', get_template_directory_uri() . '/assets/main.js', [], filemtime(get_template_directory() . '/assets/main.js'), true);
