@@ -16,7 +16,6 @@ class HOMEI_THEME
     protected function __construct()
     {
         //load classes.
-        wp_die('hello');
         $this->set_hooks();
     }
 
