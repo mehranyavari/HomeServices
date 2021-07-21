@@ -6,6 +6,10 @@
  * @package Home Services
  */
 
+if (!defined('HOMEI_DIR_PATH')){
+define('HOMEI_DIR_PATH',untrailingslashit(get_template_directory()));
+}
+require_once HOMEI_DIR_PATH.'/inc/helpers/autoloader.php';
 function homei_enqueue_scripts()
 {
     //wp_enqueue_style('stylesheet',get_template_directory_uri().'/style.css');
