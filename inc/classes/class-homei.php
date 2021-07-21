@@ -65,9 +65,9 @@ class HOMEI_THEME
         add_theme_support('wp-block-styles');
 
         global $content_width;
-if (!isset($content_width)){
-    $content_width=1240;
-}
+        if (!isset($content_width)) {
+            $content_width = 1240;
+        }
 
     }
 }
