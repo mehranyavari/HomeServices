@@ -8,8 +8,8 @@
 ?>
 <?php get_header() ?>
 
-<div class="content">
-    <h1 style="text-align: center">سلام وردپرس</h1>
-</div>
+    <div class="content">
+        <?php esc_html_e('Content Index', 'homei'); ?>
+    </div>
 
 <?php get_footer() ?>
