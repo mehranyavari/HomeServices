@@ -20,18 +20,16 @@
                     <div class="row">
                         <?php while (have_posts()): the_post(); ?>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php the_title(); ?></h5>
-                                        <p class="card-text"><?php the_excerpt(); ?></p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
+                                <?php get_template_part('template-parts/content') ?>
                             </div>
                         <?php endwhile; ?>
                     </div>
                 </div>
-            <?php endif; ?>
+            <?php
+            else:
+                get_template_part('template-parts/content-none');
+            endif; ?>
+
         </main>
     </div>
 
