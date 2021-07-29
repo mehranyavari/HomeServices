@@ -1,6 +1,6 @@
 <?php
 
-function get_the_post_custom_thumbnail($post_id, $size = 'featured-large', $additional_attributes = []): string
+function get_the_post_custom_thumbnail($post_id, $size = 'featured-thumbnail', $additional_attributes = []): string
 {
     $custom_thumbnail = '';
 
@@ -29,7 +29,7 @@ function get_the_post_custom_thumbnail($post_id, $size = 'featured-large', $addi
  * @param string $size
  * @param array $additional_attributes
  */
-function the_post_custom_thumbnail($post_id, $size = 'featured-large', $additional_attributes = [])
+function the_post_custom_thumbnail($post_id, $size = 'featured-thumbnail', $additional_attributes = [])
 {
     echo get_the_post_custom_thumbnail($post_id, $size, $additional_attributes);
 }
